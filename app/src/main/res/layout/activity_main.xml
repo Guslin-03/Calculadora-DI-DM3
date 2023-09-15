@@ -4,13 +4,240 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background=" #5C5C6F "
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/bAC"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text="AC"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b7"
+        app:layout_constraintEnd_toStartOf="@+id/bSpecial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <Button
+        android:id="@+id/bSplit"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text="/"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bMultiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bSpecial"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <Button
+        android:id="@+id/b0"
+        android:layout_width="168dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="0"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bComma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b1"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/bSpecial"
+        android:layout_width="168dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#75D35252"
+        android:text="Special"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b8"
+        app:layout_constraintEnd_toStartOf="@+id/bSplit"
+        app:layout_constraintStart_toEndOf="@+id/bAC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <Button
+        android:id="@+id/bResult"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text="="
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bComma"
+        app:layout_constraintTop_toBottomOf="@+id/bAdd" />
+
+    <Button
+        android:id="@+id/bComma"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text=","
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bResult"
+        app:layout_constraintStart_toEndOf="@+id/b0"
+        app:layout_constraintTop_toBottomOf="@+id/b3" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="1"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b0"
+        app:layout_constraintEnd_toStartOf="@+id/b2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b4" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="2"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b0"
+        app:layout_constraintEnd_toStartOf="@+id/b3"
+        app:layout_constraintStart_toEndOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/b5" />
+
+    <Button
+        android:id="@+id/bAdd"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text="+"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b3"
+        app:layout_constraintTop_toBottomOf="@+id/bSubtract" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="3"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bComma"
+        app:layout_constraintEnd_toStartOf="@+id/bAdd"
+        app:layout_constraintStart_toEndOf="@+id/b2"
+        app:layout_constraintTop_toBottomOf="@+id/b6" />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="4"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b1"
+        app:layout_constraintEnd_toStartOf="@+id/b5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b7" />
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="5"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b2"
+        app:layout_constraintEnd_toStartOf="@+id/b6"
+        app:layout_constraintStart_toEndOf="@+id/b4"
+        app:layout_constraintTop_toBottomOf="@+id/b8" />
+
+    <Button
+        android:id="@+id/bSubtract"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text="-"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b6"
+        app:layout_constraintTop_toBottomOf="@+id/bMultiply" />
+
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="6"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b3"
+        app:layout_constraintEnd_toStartOf="@+id/bSubtract"
+        app:layout_constraintStart_toEndOf="@+id/b5"
+        app:layout_constraintTop_toBottomOf="@+id/b9" />
+
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="7"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b4"
+        app:layout_constraintEnd_toStartOf="@+id/b8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bAC" />
+
+    <Button
+        android:id="@+id/bMultiply"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#839575CD"
+        android:text="x"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bSubtract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b9"
+        app:layout_constraintTop_toBottomOf="@+id/bSplit" />
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="8"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b5"
+        app:layout_constraintEnd_toStartOf="@+id/b9"
+        app:layout_constraintStart_toEndOf="@+id/b7"
+        app:layout_constraintTop_toBottomOf="@+id/bSpecial" />
+
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#214283"
+        android:text="9"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b6"
+        app:layout_constraintEnd_toStartOf="@+id/bMultiply"
+        app:layout_constraintStart_toEndOf="@+id/b8"
+        app:layout_constraintTop_toBottomOf="@+id/bSpecial" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="356dp"
+        android:layout_height="90dp"
+        android:accessibilityHeading="false"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:justificationMode="inter_word"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textIsSelectable="false"
+        android:textSize="65sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/bSpecial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
