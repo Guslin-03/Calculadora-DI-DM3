@@ -3,17 +3,25 @@ package com.example.calculadora
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.annotation.SuppressLint
+import android.graphics.Color
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
 
     private var backUp:String = "0"
+    private var darkMode:Boolean = false
+    private lateinit var primaryConstraintLayout: ConstraintLayout
+    private lateinit var textViewResult:TextView
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //ConstraintLayout
+        primaryConstraintLayout = findViewById(R.id.primaryConstraintLayout)
         //Numbers
         val b0: Button = findViewById(R.id.b0)
         val b1: Button = findViewById(R.id.b1)
@@ -36,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val bSubtract: Button = findViewById(R.id.bSubtract)
         val bAdd: Button = findViewById(R.id.bAdd)
         //TextView
-        val textViewResult:TextView = findViewById(R.id.textViewResult)
+        textViewResult = findViewById(R.id.textViewResult)
 
         b0.setOnClickListener{
             textViewResult.text = (b0.text).toString()
@@ -119,11 +127,45 @@ class MainActivity : AppCompatActivity() {
             textViewResult.text = (bComma.text).toString()
             backUp = textViewResult.text.toString()
         }
+
+        bResult.setOnClickListener {
+
+            textViewResult.text = (bResult.text).toString()
+            backUp = textViewResult.text.toString()
+
+        }
+
+        bSpecial.setOnClickListener {
+
+            darkMode = !darkMode
+            setDarkMode(primaryConstraintLayout,textViewResult)
+
+        }
+
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun setDarkMode(primaryConstraintLayout: ConstraintLayout, textViewResult: TextView) {
+
+        if (darkMode) {
+            primaryConstraintLayout.background = getDrawable(R.color.white)
+            textViewResult.background = getDrawable(R.color.gray)
+            textViewResult.setTextColor(Color.parseColor("#FFFFFF"))
+
+        } else {
+            primaryConstraintLayout.background = getDrawable(R.color.gray)
+            textViewResult.background = getDrawable(R.color.white)
+            textViewResult.setTextColor(Color.parseColor("#000000"))
+
+        }
+
     }
 
     override fun onResume(){
         super.onResume()
         val text:TextView = findViewById(R.id.textViewResult)
+        Log.d("onResume", darkMode.toString())
+        setDarkMode(primaryConstraintLayout,textViewResult)
         text.text = backUp
     }
 
@@ -131,11 +173,14 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString("textViewResult", backUp)
+        outState.putBoolean("isDarkMode", darkMode)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         backUp = savedInstanceState.getString("textViewResult", "").toString()
+        darkMode = savedInstanceState.getBoolean("isDarkMode")
+        Log.d("onRestoreInstanceState",darkMode.toString())
     }
 
 }

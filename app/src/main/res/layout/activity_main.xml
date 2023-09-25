@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/primaryConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background=" #5C5C6F "
@@ -12,31 +13,33 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text="AC"
+        android:text="@string/ac"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b7"
         app:layout_constraintEnd_toStartOf="@+id/bSpecial"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/bSplit"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text="/"
+        android:text="@string/slash"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bMultiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bSpecial"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/b0"
         android:layout_width="168dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="0"
+        android:text="@string/_0"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bComma"
@@ -49,7 +52,7 @@
         android:layout_width="168dp"
         android:layout_height="70dp"
         android:backgroundTint="#75D35252"
-        android:text="Special"
+        android:text="@string/special"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b8"
         app:layout_constraintEnd_toStartOf="@+id/bSplit"
@@ -61,31 +64,33 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text="="
+        android:text="@string/equals"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bComma"
-        app:layout_constraintTop_toBottomOf="@+id/bAdd" />
+        app:layout_constraintTop_toBottomOf="@+id/bAdd"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/bComma"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text=","
+        android:text="@string/comma"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bResult"
         app:layout_constraintStart_toEndOf="@+id/b0"
-        app:layout_constraintTop_toBottomOf="@+id/b3" />
+        app:layout_constraintTop_toBottomOf="@+id/b3"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/b1"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="1"
+        android:text="@string/_1"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b0"
         app:layout_constraintEnd_toStartOf="@+id/b2"
@@ -97,7 +102,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="2"
+        android:text="@string/_2"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b0"
         app:layout_constraintEnd_toStartOf="@+id/b3"
@@ -109,19 +114,20 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text="+"
+        android:text="@string/add"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/b3"
-        app:layout_constraintTop_toBottomOf="@+id/bSubtract" />
+        app:layout_constraintTop_toBottomOf="@+id/bSubtract"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/b3"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="3"
+        android:text="@string/_3"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bComma"
         app:layout_constraintEnd_toStartOf="@+id/bAdd"
@@ -133,7 +139,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="4"
+        android:text="@string/_4"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b1"
         app:layout_constraintEnd_toStartOf="@+id/b5"
@@ -145,7 +151,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="5"
+        android:text="@string/_5"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b2"
         app:layout_constraintEnd_toStartOf="@+id/b6"
@@ -157,19 +163,20 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text="-"
+        android:text="@string/subtract"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/b6"
-        app:layout_constraintTop_toBottomOf="@+id/bMultiply" />
+        app:layout_constraintTop_toBottomOf="@+id/bMultiply"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/b6"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="6"
+        android:text="@string/_6"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b3"
         app:layout_constraintEnd_toStartOf="@+id/bSubtract"
@@ -181,7 +188,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="7"
+        android:text="@string/_7"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b4"
         app:layout_constraintEnd_toStartOf="@+id/b8"
@@ -193,19 +200,20 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#839575CD"
-        android:text="x"
+        android:text="@string/x"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bSubtract"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/b9"
-        app:layout_constraintTop_toBottomOf="@+id/bSplit" />
+        app:layout_constraintTop_toBottomOf="@+id/bSplit"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/b8"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="8"
+        android:text="@string/_8"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b5"
         app:layout_constraintEnd_toStartOf="@+id/b9"
@@ -217,7 +225,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="#214283"
-        android:text="9"
+        android:text="@string/_9"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b6"
         app:layout_constraintEnd_toStartOf="@+id/bMultiply"
@@ -232,7 +240,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-condensed"
         android:justificationMode="inter_word"
-        android:text="0"
+        android:text="@string/default0"
         android:textAlignment="textEnd"
         android:textIsSelectable="false"
         android:textSize="65sp"
@@ -240,6 +248,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bSpecial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
